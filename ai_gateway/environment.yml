@@ -1,0 +1,28 @@
+name: ai_gateway
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+
+  # core libs
+  - numpy
+  - pillow
+  - matplotlib
+  - opencv
+  - pydicom
+  - boto3
+
+  # web frameworks
+  - flask
+  - fastapi
+  - uvicorn
+
+  # utils
+  - python-dotenv
+  - pip
+
+  # pip-only packages
+  - pip:
+      - albumentations

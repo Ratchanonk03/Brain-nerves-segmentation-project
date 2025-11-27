@@ -1,0 +1,6 @@
+numpy
+
+boto3
+
+torch
+segmentation-models-pytorch

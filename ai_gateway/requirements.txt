@@ -1,0 +1,18 @@
+
+# core libs
+numpy
+pillow
+opencv-python-headless
+pydicom
+boto3
+
+# web frameworks
+fastapi
+uvicorn[standard]
+
+# utils
+python-dotenv
+python-multipart
+
+# processing
+albumentations
