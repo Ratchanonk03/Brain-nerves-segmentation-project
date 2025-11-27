@@ -1,5 +1,6 @@
 import os
 import json
+from pathlib import Path
 
 from aiohttp import ClientError
 
@@ -8,7 +9,12 @@ from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.responses import JSONResponse
 
 import logging
-import app.helper as helper
+from ai_gateway.app import helper
+
+from dotenv import load_dotenv
+
+env_path = Path.cwd() / ".env"
+load_dotenv(dotenv_path=env_path)
 
 # --------------------------- Environment Variables ---------------------------
 PREPROCESSED_BUCKET = os.getenv("PREPROCESSED_BUCKET")
@@ -18,6 +24,14 @@ AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 AWS_SESSION_TOKEN = os.getenv("AWS_SESSION_TOKEN")
 AWS_REGION = os.getenv("AWS_REGION")
+
+if PREPROCESSED_BUCKET is None:
+    raise RuntimeError("PREPROCESSED_BUCKET not set")
+
+if SAGEMAKER_ENDPOINT_NAME is None:
+    raise RuntimeError("SAGEMAKER_ENDPOINT_NAME not set")
+
+
 
 app = FastAPI(title="AI Gateway (Segmentation Demo)")
 logger = logging.getLogger("uvicorn.error")
@@ -33,19 +47,7 @@ sagemaker = boto3.client("sagemaker-runtime",
                         aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
                         aws_session_token=AWS_SESSION_TOKEN)
 
-s3_connector = helper.S3Connector(s3)
-
-def check_endpoint(name: str):
-    if name is None:
-        raise RuntimeError("SAGEMAKER_ENDPOINT_NAME not set in .env")
-    
-    try:
-        response = sagemaker.describe_endpoint(EndpointName=name)
-        status = response["EndpointStatus"]
-        if status != "InService":
-            raise RuntimeError(f"SageMaker endpoint '{name}' is not InService (current status: {status})")
-    except Exception:
-        raise RuntimeError(f"SageMaker endpoint '{name}' does not exist or cannot be accessed")
+s3_connector = helper.S3Connector(s3, PREPROCESSED_BUCKET)
     
 def call_model(inputs: dict, local: bool = False):
     print("[call_model] ENTER with:", inputs)
@@ -85,13 +87,6 @@ def call_model(inputs: dict, local: bool = False):
         logger.error(f"[Unexpected error] {e}")
         raise RuntimeError("Internal model invocation error")
 
-def check_s3_health(bucket_name: str) -> bool:
-    try:
-        s3.head_bucket(Bucket=bucket_name)
-        return True
-    except Exception as e:
-        print("[S3 Health Error]", e)  # log internally
-        return False
     
 def check_model_health() -> bool:
     try:
@@ -114,48 +109,17 @@ def check_model_health() -> bool:
 def health_check():
     return {"status": "ok"}
 
-@app.get("/model_health")
-def model_health_check():
-    try:
-        response = sagemaker.invoke_endpoint(
-            EndpointName=SAGEMAKER_ENDPOINT_NAME,
-            ContentType="application/json",
-            Accept="application/json",
-            Body=json.dumps({"ping": True}),
-        )
-
-        code = response["ResponseMetadata"]["HTTPStatusCode"]
-
-        if code == 200:
-            return {"status": "ok", "model": "healthy"}
-        else:
-            return {"status": "degraded", "model": "unhealthy"}
-
-    except Exception as e:
-        raise HTTPException(
-            status_code=503,
-            detail={"status": "unhealthy", "error": str(e)}
-        )
-
-@app.get("/s3_health")
-def s3_health_check():
-    s3_preprocess = check_s3_health(PREPROCESSED_BUCKET)
-    
-    health = {
-        "s3_preprocess": "healthy" if s3_preprocess else "unhealthy"
-        }
-
-    if not s3_preprocess:
-        raise HTTPException(status_code=503, detail={"status": "degraded", **health})
-
-    return {"status": "ok", **health}
-    
 @app.post("/infer")
 def run_inference(payloads: list[UploadFile] = File(...)):
-    try:      
+    try:
+        helper.anonymize_dataset(payloads)  # mock anonymization step for demo
+        helper.dicom_to_image_array(payloads)  # mock DICOM conversion step for demo
+         
         model_payloads = {"inputs": s3_connector.upload_multiple_to_s3(payloads)}
         
-        model_response = call_model(model_payloads, True)
+        model_response = call_model(model_payloads, False)
+        
+        helper.image_array_to_dicom(model_response)  # mock image array to DICOM conversion for demo
         
         return JSONResponse(content=model_response)
     

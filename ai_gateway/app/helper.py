@@ -9,14 +9,10 @@ import cv2
 from fastapi import UploadFile
 import albumentations as A
 
-PREPROCESSED_BUCKET = os.getenv("PREPROCESSED_BUCKET")
-
-if PREPROCESSED_BUCKET is None:
-    raise RuntimeError("PREPROCESSED_BUCKET not set")
-
 class S3Connector:
-    def __init__(self, s3_client):
+    def __init__(self, s3_client, preprocessed_bucket):
         self.s3 = s3_client
+        self.preprocessed_bucket = preprocessed_bucket
         
     # ------------------------- Download -----------------------
     def download_from_s3(self, bucket: str, mask_key: str, prob_key: str) -> bytes:
@@ -63,7 +59,7 @@ class S3Connector:
             preprocessed = preprocess_image(image)
             key = uuid.uuid4().hex
             preprocessed_key = f"preprocessed/{key}.npy"
-            bucket = PREPROCESSED_BUCKET
+            bucket = self.preprocessed_bucket
             result = self.upload_to_s3(bucket, preprocessed, preprocessed_key)
             results.append(result)
             print(f"[run_inference] Uploading {payload.filename} to S3: bucket={bucket}, key={preprocessed_key}")

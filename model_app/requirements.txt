@@ -1,6 +1,15 @@
 numpy
+opencv-python
+uvicorn
 
+
+fastapi
 boto3
 
 torch
+torchvision
 segmentation-models-pytorch
+
+multi-model-server
+sagemaker-inference
+mxnet
