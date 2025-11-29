@@ -1,0 +1,811 @@
+{
+  "test_config": {
+    "num_batches": 100,
+    "images_per_batch": 100,
+    "max_workers": 50,
+    "total_images": 10000,
+    "timestamp": 1764330379
+  },
+  "results": [
+    {
+      "batch_id": 2,
+      "latency": 120.52530824998394,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 1,
+      "latency": 120.60786766605452,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 5,
+      "latency": 120.79461804206949,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 7,
+      "latency": 121.2929334170185,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 3,
+      "latency": 121.58196312491782,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 8,
+      "latency": 121.57147141604219,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 6,
+      "latency": 121.63562258309685,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 10,
+      "latency": 121.6552925419528,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 11,
+      "latency": 121.75804020802025,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 12,
+      "latency": 121.79238379199523,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 4,
+      "latency": 121.93050208408386,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 9,
+      "latency": 121.88496049994137,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 18,
+      "latency": 121.87924008397385,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 16,
+      "latency": 121.94531624997035,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 13,
+      "latency": 121.98474174994044,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 15,
+      "latency": 121.99034466699231,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 20,
+      "latency": 121.90038762497716,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 26,
+      "latency": 121.74950949999038,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 21,
+      "latency": 121.88727249996737,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 22,
+      "latency": 121.89527937502135,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 17,
+      "latency": 122.00769658293575,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 19,
+      "latency": 121.98122725007124,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 23,
+      "latency": 121.8800460830098,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 14,
+      "latency": 122.07274004200008,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 24,
+      "latency": 121.88706233294215,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 30,
+      "latency": 121.88520145893563,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 25,
+      "latency": 121.98747158306651,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 28,
+      "latency": 121.9117712500738,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 27,
+      "latency": 121.97735037503298,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 32,
+      "latency": 121.94038937508594,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 29,
+      "latency": 121.99134362500627,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 31,
+      "latency": 121.9491989579983,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 37,
+      "latency": 121.83086379209999,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 35,
+      "latency": 121.85665766696911,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 34,
+      "latency": 121.90440858295187,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 38,
+      "latency": 121.81522937503178,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 33,
+      "latency": 121.95716800005175,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 36,
+      "latency": 121.88285674992949,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 40,
+      "latency": 121.7964953329647,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 42,
+      "latency": 121.78399345895741,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 47,
+      "latency": 121.67340479197446,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 41,
+      "latency": 121.80950137495529,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 45,
+      "latency": 121.78864079201594,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 46,
+      "latency": 121.86736008396838,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 44,
+      "latency": 121.93890520790592,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 43,
+      "latency": 121.98534212494269,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 48,
+      "latency": 121.93332358309999,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 50,
+      "latency": 121.91653895901982,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 39,
+      "latency": 122.1772598340176,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 49,
+      "latency": 122.07462237495929,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 52,
+      "latency": 120.12572195893154,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 51,
+      "latency": 120.20862849999685,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 53,
+      "latency": 120.08323016599752,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 54,
+      "latency": 120.1296574579319,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 55,
+      "latency": 120.10567387496121,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 56,
+      "latency": 120.10158437490463,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 57,
+      "latency": 120.08366970799398,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 58,
+      "latency": 120.04746904200874,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 59,
+      "latency": 120.43588345800526,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 62,
+      "latency": 122.40663116693031,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 60,
+      "latency": 122.7391330000246,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 61,
+      "latency": 123.08397174999118,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 63,
+      "latency": 122.9446481250925,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 64,
+      "latency": 123.01421891700011,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 70,
+      "latency": 122.92895795800723,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 71,
+      "latency": 122.96346987504512,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 66,
+      "latency": 123.17003258294426,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 69,
+      "latency": 123.15469479095191,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 67,
+      "latency": 123.19021229201462,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 65,
+      "latency": 123.22214004199486,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 73,
+      "latency": 123.1616048750002,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 68,
+      "latency": 123.22811570798513,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 76,
+      "latency": 123.0542337920051,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 74,
+      "latency": 123.21868987497874,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 75,
+      "latency": 123.18633420905098,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 72,
+      "latency": 123.25513087504078,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 77,
+      "latency": 123.24373445904348,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 79,
+      "latency": 123.23660183302127,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 83,
+      "latency": 123.17762950004544,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 82,
+      "latency": 123.19322516699322,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 97,
+      "latency": 122.8468804169679,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 94,
+      "latency": 122.9604894160293,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 86,
+      "latency": 123.20115554204676,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 81,
+      "latency": 123.23832633299753,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 90,
+      "latency": 123.17315695795696,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 96,
+      "latency": 122.94751233293209,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 91,
+      "latency": 123.16057662502863,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 89,
+      "latency": 123.18237275001593,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 99,
+      "latency": 122.82432700006757,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 100,
+      "latency": 122.75482016603928,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 92,
+      "latency": 123.1680480419891,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 87,
+      "latency": 123.2095834169304,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 80,
+      "latency": 123.27080641698558,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 98,
+      "latency": 122.91509720799513,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 85,
+      "latency": 123.26470658299513,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 84,
+      "latency": 123.28214295802172,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 95,
+      "latency": 123.00427825003862,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 93,
+      "latency": 123.15753650001716,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 88,
+      "latency": 123.25063045800198,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    },
+    {
+      "batch_id": 78,
+      "latency": 123.38493654096965,
+      "status_code": 408,
+      "success": false,
+      "batch_size": 100,
+      "error": "Request timeout"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.8.0-cudnn8-runtime-ubuntu22.04
+FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -9,26 +9,27 @@ RUN apt-get update && apt-get install -y --no-install-recommends\
     python3-opencv \
     libglib2.0-0 \
     openjdk-11-jre-headless \
+    && ln -s /usr/bin/python3 /usr/bin/python \
     && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir -p /opt/ml/model/code
+RUN mkdir -p /opt/ml/model && mkdir -p /opt/ml/code
 
-COPY requirements.txt /opt/ml/model/code/requirements.txt
+COPY requirements.txt /opt/ml/code/requirements.txt
 
-RUN pip install --no-cache-dir -r /opt/ml/model/code/requirements.txt 
-
-WORKDIR /model_app
+RUN pip install --no-cache-dir --timeout 300 --retries 5 -r /opt/ml/code/requirements.txt 
 
 ENV PYTHONUNBUFFERED=1 \
-    PYTHONDONTWRITEBYTECODE=1
+    PYTHONDONTWRITEBYTECODE=1 \
+    PATH="/root/.local/bin:${PATH}"
 
-
-COPY inference/code/default_pytorch_inference_handler.py /opt/ml/model/code/default_pytorch_inference_handler.py
-COPY inference/code/handler_service.py /opt/ml/model/code/handler_service.py
-COPY inference/code/server.py /opt/ml/model/code/server.py
+COPY inference/code/inference_handler.py /opt/ml/code/inference_handler.py
+COPY inference/code/handler_service.py /opt/ml/code/handler_service.py
+COPY inference/code/server.py /opt/ml/code/server.py
 
 EXPOSE 8080
 
-ENTRYPOINT ["python", "-m", "sagemaker_inference"]
+WORKDIR /opt/ml/code
+
+ENTRYPOINT ["python3", "server.py"]
 
 CMD ["serve"]

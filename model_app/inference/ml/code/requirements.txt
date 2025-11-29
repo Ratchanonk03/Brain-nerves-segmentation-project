@@ -1,0 +1,19 @@
+# utility
+numpy
+
+# api
+uvicorn
+fastapi
+
+# model
+torch
+torchvision
+segmentation-models-pytorch
+torchserve
+torch-model-archiver
+torch-workflow-archiver
+
+# aws
+boto3
+sagemaker-inference
+sagemaker-pytorch-inference

@@ -3,7 +3,7 @@ load_dotenv(dotenv_path="/Users/ratchanonkhongsawi/Desktop/CMKL/3rd/Scalable/ass
 
 
 import os
-from ..inference.inference import model_fn, input_fn, predict_fn, output_fn
+from ..code.inference_handler import model_fn, input_fn, predict_fn, output_fn
 import json
 from pathlib import Path
 

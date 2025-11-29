@@ -15,7 +15,7 @@ class S3Connector:
         self.preprocessed_bucket = preprocessed_bucket
         
     # ------------------------- Download -----------------------
-    def download_from_s3(self, bucket: str, mask_key: str, prob_key: str) -> bytes:
+    def download_from_s3(self, bucket: str, mask_key: str, prob_key: str):
         mask_buffer = io.BytesIO()
         self.s3.download_fileobj(bucket, mask_key, mask_buffer)
         mask_buffer.seek(0)
@@ -26,7 +26,7 @@ class S3Connector:
         
         return mask_buffer, prob_buffer
 
-    def download_multiple_from_s3(self, outputs) -> bytes:
+    def download_multiple_from_s3(self, outputs):
         buffers = []
         for output in outputs:
             bucket = output["bucket"]

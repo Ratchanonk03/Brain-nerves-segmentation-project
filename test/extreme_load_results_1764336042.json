@@ -1,0 +1,500 @@
+{
+  "test_config": {
+    "gateways": 30,
+    "batch_size": 1000,
+    "batches_per_gateway": 1,
+    "total_requests": 30,
+    "total_duration": 335.84203577041626
+  },
+  "summary": {
+    "successful_requests": 0,
+    "failed_requests": 30,
+    "success_rate": 0.0,
+    "requests_per_second": 0.08932771006815891,
+    "avg_response_time": 0
+  },
+  "gateway_stats": {
+    "8000": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8021": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8020": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8009": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8025": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8014": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8003": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8016": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8010": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8028": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8001": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8017": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8019": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8024": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8005": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8008": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8018": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8006": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8011": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8027": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8022": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8002": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8007": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8023": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8004": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8029": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8013": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8015": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8026": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    },
+    "8012": {
+      "success": 0,
+      "failed": 1,
+      "total_time": 0
+    }
+  },
+  "detailed_results": [
+    {
+      "gateway_id": 1,
+      "gateway_port": 8000,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 313.4087870121002,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8000): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:19"
+    },
+    {
+      "gateway_id": 2,
+      "gateway_port": 8001,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 326.82143902778625,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8001): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:33"
+    },
+    {
+      "gateway_id": 3,
+      "gateway_port": 8002,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 330.12631702423096,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8002): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:36"
+    },
+    {
+      "gateway_id": 4,
+      "gateway_port": 8003,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 324.2827169895172,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8003): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:30"
+    },
+    {
+      "gateway_id": 5,
+      "gateway_port": 8004,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 332.22748613357544,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8004): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:38"
+    },
+    {
+      "gateway_id": 6,
+      "gateway_port": 8005,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 326.8310589790344,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8005): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:33"
+    },
+    {
+      "gateway_id": 7,
+      "gateway_port": 8006,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 329.8521018028259,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8006): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:36"
+    },
+    {
+      "gateway_id": 8,
+      "gateway_port": 8007,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 330.84231781959534,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8007): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:37"
+    },
+    {
+      "gateway_id": 9,
+      "gateway_port": 8008,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 329.82334208488464,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8008): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:36"
+    },
+    {
+      "gateway_id": 10,
+      "gateway_port": 8009,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 321.56461906433105,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8009): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:27"
+    },
+    {
+      "gateway_id": 11,
+      "gateway_port": 8010,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 325.4605219364166,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8010): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:31"
+    },
+    {
+      "gateway_id": 12,
+      "gateway_port": 8011,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 329.83281087875366,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8011): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:36"
+    },
+    {
+      "gateway_id": 13,
+      "gateway_port": 8012,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 335.2077193260193,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8012): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:41"
+    },
+    {
+      "gateway_id": 14,
+      "gateway_port": 8013,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 333.3053529262543,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8013): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:39"
+    },
+    {
+      "gateway_id": 15,
+      "gateway_port": 8014,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 323.6058728694916,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8014): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:30"
+    },
+    {
+      "gateway_id": 16,
+      "gateway_port": 8015,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 333.34944105148315,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8015): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:39"
+    },
+    {
+      "gateway_id": 17,
+      "gateway_port": 8016,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 325.24750685691833,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8016): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:31"
+    },
+    {
+      "gateway_id": 18,
+      "gateway_port": 8017,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 326.78159189224243,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8017): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:33"
+    },
+    {
+      "gateway_id": 19,
+      "gateway_port": 8018,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 329.79040479660034,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8018): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:36"
+    },
+    {
+      "gateway_id": 20,
+      "gateway_port": 8019,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 326.778048992157,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8019): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:33"
+    },
+    {
+      "gateway_id": 21,
+      "gateway_port": 8020,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 321.25208497047424,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8020): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:27"
+    },
+    {
+      "gateway_id": 22,
+      "gateway_port": 8021,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 314.26574516296387,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8021): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:20"
+    },
+    {
+      "gateway_id": 23,
+      "gateway_port": 8022,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 330.04775881767273,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8022): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:36"
+    },
+    {
+      "gateway_id": 24,
+      "gateway_port": 8023,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 330.9808530807495,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8023): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:37"
+    },
+    {
+      "gateway_id": 25,
+      "gateway_port": 8024,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 326.74259424209595,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8024): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:33"
+    },
+    {
+      "gateway_id": 26,
+      "gateway_port": 8025,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 322.9086289405823,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8025): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:29"
+    },
+    {
+      "gateway_id": 27,
+      "gateway_port": 8026,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 334.40369606018066,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8026): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:40"
+    },
+    {
+      "gateway_id": 28,
+      "gateway_port": 8027,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 329.9167730808258,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8027): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:36"
+    },
+    {
+      "gateway_id": 29,
+      "gateway_port": 8028,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 325.6842448711395,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8028): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:32"
+    },
+    {
+      "gateway_id": 30,
+      "gateway_port": 8029,
+      "batch_num": 1,
+      "images_count": 1000,
+      "status_code": 0,
+      "duration": 332.878968000412,
+      "success": false,
+      "error": "HTTPConnectionPool(host='localhost', port=8029): Read timed out. (read timeout=300)",
+      "timestamp": "20:20:39"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "scenario": "Warm-up: 10 batches, 1 image each",
+    "config": {
+      "num_batches": 10,
+      "images_per_batch": 1,
+      "max_workers": 5
+    },
+    "results": [
+      {
+        "batch_id": 1,
+        "latency": 60.00623933307361,
+        "status_code": 408,
+        "success": false,
+        "batch_size": 1,
+        "error": "Request timeout"
+      },
+      {
+        "batch_id": 2,
+        "latency": 60.00707799999509,
+        "status_code": 408,
+        "success": false,
+        "batch_size": 1,
+        "error": "Request timeout"
+      },
+      {
+        "batch_id": 5,
+        "latency": 60.00731895794161,
+        "status_code": 408,
+        "success": false,
+        "batch_size": 1,
+        "error": "Request timeout"
+      },
+      {
+        "batch_id": 4,
+        "latency": 60.007625750033185,
+        "status_code": 408,
+        "success": false,
+        "batch_size": 1,
+        "error": "Request timeout"
+      },
+      {
+        "batch_id": 3,
+        "latency": 60.008483708952554,
+        "status_code": 408,
+        "success": false,
+        "batch_size": 1,
+        "error": "Request timeout"
+      },
+      {
+        "batch_id": 6,
+        "latency": 60.016799208009616,
+        "status_code": 408,
+        "success": false,
+        "batch_size": 1,
+        "error": "Request timeout"
+      },
+      {
+        "batch_id": 10,
+        "latency": 60.01463687501382,
+        "status_code": 408,
+        "success": false,
+        "batch_size": 1,
+        "error": "Request timeout"
+      },
+      {
+        "batch_id": 7,
+        "latency": 60.01619966700673,
+        "status_code": 408,
+        "success": false,
+        "batch_size": 1,
+        "error": "Request timeout"
+      },
+      {
+        "batch_id": 9,
+        "latency": 60.01547987491358,
+        "status_code": 408,
+        "success": false,
+        "batch_size": 1,
+        "error": "Request timeout"
+      },
+      {
+        "batch_id": 8,
+        "latency": 60.015741124982014,
+        "status_code": 408,
+        "success": false,
+        "batch_size": 1,
+        "error": "Request timeout"
+      }
+    ]
+  }
+]

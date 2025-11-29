@@ -117,7 +117,7 @@ def run_inference(payloads: list[UploadFile] = File(...)):
          
         model_payloads = {"inputs": s3_connector.upload_multiple_to_s3(payloads)}
         
-        model_response = call_model(model_payloads, False)
+        model_response = call_model(model_payloads)
         
         helper.image_array_to_dicom(model_response)  # mock image array to DICOM conversion for demo
         

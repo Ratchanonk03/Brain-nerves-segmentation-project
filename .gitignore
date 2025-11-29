@@ -14,3 +14,17 @@ __pycache__/
 
 # macOS
 .DS_Store
+
+# Archives
+*.zip
+*.tar.gz
+
+# test folder
+*/test/
+
+# data folder
+*/dataset/
+
+# mac specific
+.DS_Store
+._*
