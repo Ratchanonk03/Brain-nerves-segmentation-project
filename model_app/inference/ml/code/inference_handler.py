@@ -8,7 +8,6 @@ import torch
 import segmentation_models_pytorch as smp
 
 import boto3
-from fastapi import FastAPI
 
 from sagemaker_pytorch_serving_container import default_pytorch_inference_handler
 from sagemaker_inference import content_types
@@ -106,7 +105,6 @@ def input_fn(request_body, content_type):
 
     data = json.loads(request_body)
 
-    # --- validate required fields ---
     if "inputs" not in data:
         raise ValueError("JSON must contain 'inputs' field")
     

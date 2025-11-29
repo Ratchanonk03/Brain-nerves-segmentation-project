@@ -8,22 +8,16 @@ class HandlerService(LinknetHandler):
         self._model = None
     
     def initialize(self, context):
-        """
-        Initialize the handler with model loading
-        """
         properties = context.system_properties
         model_dir = properties.get("model_dir")
         self._model = model_fn(model_dir)
     
     def handle(self, data, context):
-        """
-        TorchServe handler entry point
-        """
-        # Ensure model is loaded
+ 
         if self._model is None:
             self.initialize(context)
         
-        # Process input - TorchServe expects application/json by default
+        # TorchServe expects application/json by default
         content_type = 'application/json'
         if hasattr(context, 'get_request_header'):
             try:
