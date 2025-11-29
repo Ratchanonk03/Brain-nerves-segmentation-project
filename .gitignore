@@ -20,10 +20,12 @@ __pycache__/
 *.tar.gz
 
 # test folder
-*/test/
+test/*
+**/test/*
 
 # data folder
-*/dataset/
+dataset/*
+**/dataset/*
 
 # mac specific
 .DS_Store
