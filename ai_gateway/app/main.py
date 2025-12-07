@@ -9,12 +9,7 @@ from fastapi import FastAPI, HTTPException, UploadFile, File
 from fastapi.responses import JSONResponse
 
 import logging
-from ai_gateway.app import helper
-
-from dotenv import load_dotenv
-
-env_path = Path.cwd() / ".env"
-load_dotenv(dotenv_path=env_path)
+import helper
 
 # --------------------------- Environment Variables ---------------------------
 PREPROCESSED_BUCKET = os.getenv("PREPROCESSED_BUCKET")
@@ -112,15 +107,28 @@ def health_check():
 @app.post("/infer")
 def run_inference(payloads: list[UploadFile] = File(...)):
     try:
-        helper.anonymize_dataset(payloads)  # mock anonymization step for demo
-        helper.dicom_to_image_array(payloads)  # mock DICOM conversion step for demo
-         
-        model_payloads = {"inputs": s3_connector.upload_multiple_to_s3(payloads)}
+        # helper.anonymize_dataset(payloads)  # mock anonymization step for demo
+        # helper.dicom_to_image_array(payloads)  # mock DICOM conversion step for demo
+        
+        upload_results, original_sizes = s3_connector.upload_multiple_to_s3(payloads)
+        model_payloads = {"inputs": upload_results}
+        print("[run_inference] Model payloads prepared:", model_payloads)
         
         model_response = call_model(model_payloads)
+        print("[run_inference] Model response received:", model_response)
         
-        helper.image_array_to_dicom(model_response)  # mock image array to DICOM conversion for demo
+        # helper.image_array_to_dicom(model_response)  # mock image array to DICOM conversion for demo
         
+        mask_buffers, prob_buffers = s3_connector.download_multiple_from_s3(model_response)
+        print("[run_inference] Downloaded result buffers from S3")
+        
+        for i, (mask_buffer, prob_buffer) in enumerate(zip(mask_buffers, prob_buffers)):
+            mask_arr, prob_arr = helper.convert(mask_buffer, prob_buffer)
+            original_size = original_sizes[i] if i < len(original_sizes) else None
+            helper.save_result(mask_arr, prob_arr, save_path=f"./result/{i}", identifier=str(i), original_size=original_size)
+            print(f"[run_inference] Saved results to ./result/{i}")
+            
+         
         return JSONResponse(content=model_response)
     
     except RuntimeError as e:

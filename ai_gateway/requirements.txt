@@ -3,12 +3,12 @@
 numpy
 pillow
 opencv-python-headless
-pydicom
 boto3
 
 # web frameworks
 fastapi
 uvicorn[standard]
+aiohttp
 
 # utils
 python-dotenv
@@ -16,3 +16,4 @@ python-multipart
 
 # processing
 albumentations
+matplotlib
