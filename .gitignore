@@ -30,3 +30,21 @@ dataset/*
 # mac specific
 .DS_Store
 ._*SYS-304_00050_Scalable_infrastructure_create_and_deploy_a _website_serving_ML_model.pdf
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+# .terraform.lock.hcl  # REMOVE THIS LINE - should be committed
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Terraform variables (if they contain secrets)
+*.auto.tfvars
+secret.tfvars
+secrets.tfvars
